@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}Title{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'index_code.css' %}">
+    <link rel="stylesheet" href="{% static 'boich.css' %}">
+    <link rel="stylesheet" href="{% static 'gilroy.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'jquery.mCustomScrollbar.min.css'%}"> {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+  .loaderArea {
+  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
+  background: #1f2128;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;z-index: 999999999;background-color: #1f1b26;
+}.loader {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  border: 8px solid rgba(255,255,255,.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+
+  100% {
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+.loader:after {
+  animation: animate2 2s infinite linear;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+
+  100% {
+    transform: rotate(-180deg) skew(-360deg);
+  }
+}
+
+/*body {*/
+/*  background: linear-gradient(90deg, #00b377, #00d68f);*/
+/*  box-shadow: inset 0px 0px 90px rgba(0, 0, 0, 0.5);*/
+/*  margin: 0px;*/
+/*  padding: 0px;*/
+/*}*/
+
+.demo {
+  width: 100px;
+  height: 102px;
+  border-radius: 100%;
+  position: absolute;
+  top: 45%;
+  left: calc(50% - 50px);
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.circle .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid rgba(0, 255, 170, 0.7);
+  border-right: none;
+  border-top: none;
+  backgroudn-clip: padding;
+  box-shadow: inset 0px 0px 10px rgba(0, 255, 170, 0.15);
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle:nth-of-type(0) {
+  transform: rotate(0deg);
+}
+.circle:nth-of-type(0) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+
+.circle:nth-of-type(1) {
+  transform: rotate(70deg);
+}
+.circle:nth-of-type(1) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+
+.circle:nth-of-type(2) {
+  transform: rotate(140deg);
+}
+.circle:nth-of-type(2) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+
+.demo {
+  -webkit-animation: spin 5s infinite linear;
+          animation: spin 5s infinite linear;
+}
+
+
+    </style>
+</head>
+<body class="{%block css_body%}{%endblock%}">
+<div class="loaderArea">
+    <div class='demo'>
+  <div class='circle'>
+    <div class='inner'></div>
+  </div>
+  <div class='circle'>
+    <div class='inner'></div>
+  </div>
+  <div class='circle'>
+    <div class='inner'></div>
+  </div>
+  <div class='circle'>
+    <div class='inner'></div>
+  </div>
+  <div class='circle'>
+    <div class='inner'></div>
+  </div>
+</div>
+</div>
+<div class="app" id="app">
+    {%include 'nav_glav.html'%}
+{%block content%}{%endblock%}
+    {%include 'footer.html'%}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{% static 'typed.js' %}"></script>
+<script src="{% static 'wow.js' %}"></script>
+<script>
+$(window).scroll(function() {
+var height = $(window).scrollTop();
+if(height > 569){
+$('.navbarosn').addClass('style');
+} else{
+$('.navbarosn').removeClass('style');
+}
+});
+</script>
+
+<script>
+var navbar = $('.navbarosn'),
+scrollPrev = 0;
+
+$(window).scroll(function() {
+var scrolled = $(window).scrollTop();
+
+if ( scrolled > 269 && scrolled > scrollPrev ) {
+navbar.addClass('out');
+} else {
+navbar.removeClass('out');
+}
+scrollPrev = scrolled;
+});
+
+</script>
+<script>
+    var wnd = $(window),
+    opacityControl = $('.lo');
+
+wnd.scroll(function(){
+    var top = wnd.scrollTop(),
+        opacity = top > 1000 ? 1 : top * 1.3 / 1000;
+
+    opacityControl.css('opacity', opacity);
+});
+</script>
+<script>
+var typed = new Typed('.element', {
+  strings: ["лучшие банки", "веб-сервисы", "ecommers"],
+  typeSpeed: 90,
+  typeSpeed: 90,
+  backSpeed: 60,
+  backDelay: 1000,
+  startDelay: 1000,
+  loop: true,
+});
+</script><!----><!-- --> <!-- -->
+             <script>
+             new WOW().init();
+             </script>
+
+
+{% comment %} <script src="{% static 'jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script>
+    (function ($) {
+      $(window).on("load", function () {
+        $('body').mCustomScrollbar({
+          theme: "dark-thin"
+        });
+      });
+    })(jQuery);
+</script> {% endcomment %}
+<script>
+  $(window).on('load', function () {
+    $preloader = $('.loaderArea'),
+      $loader = $preloader.find('.loader');
+    $loader.fadeOut();
+    $preloader.delay(100).fadeOut('slow');
+  });
+</script>
+<script>
+    function grab(g) {
+  g.onmousemove = function(e) {
+    g.scrollTop += -e.movementY;
+    return false;
+  }
+
+  g.onmouseleave = function() { g.onmousemove = null; }
+  g.onmouseup = function() { g.onmousemove = null; }
+}
+</script>
+</body>
+</html>
