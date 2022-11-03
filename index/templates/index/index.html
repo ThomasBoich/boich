@@ -89,10 +89,11 @@ style="color:#FFFFFF;width:95%;margin: 0 auto;text-align:right;font-weight:400;"
         <a href="">
         <div class="rr wow fadeIn">
             <div class="rr-rr"><div class="znachenie"><span>vue</span><span>python</span><span>web</span></div>
-                <img src="{% static 'r1.png' %}" alt="">
+
+                {% comment %} <img src="{{rabota1.photo_step1.url}}" alt=""> {% endcomment %}
                 <div class="modnoe">
                     <div class="vid-rabot">
-                        <p>Фирменный стиль "Росатом"</p><h6>Росатом</h6>
+                        <p>{{rabota1.title}}Фирменный стиль "Росатом"</p><h6>{{rabota1.customer}}Росатом</h6>
                     </div>
                 </div>
             </div>
