@@ -1,6 +1,7 @@
 .BOICH{
     font-size:33px;display: flex;
     align-items: center;
+    box-sizing: border-box;
 }.BOICH a{color:#FFFFFF;margin: 0px 3% 0px 0px;margin: 0px 18px 0px 0px;}
 .BOICH span{font-size:18px;height: 22px;    height: 40px;
     width: 25px;
