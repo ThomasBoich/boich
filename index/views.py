@@ -12,7 +12,7 @@ from index.models import Rabota, ProjectType
 ## ГЛАВНАЯ СТРАНИЦА
 def index(request):
     context = {
-        'title':'Боич - технологии, опережающие время',
+        'Title':'Боич - технологии, опережающие время',
         'rabota1': Rabota.objects.get(pk=1),
         # 'rabota2': Rabota.objects.get(pk=2),
         # 'rabota': Rabota.objects.get(pk=3),
@@ -23,7 +23,7 @@ def index(request):
 ## СТРАНИЦА ВСЕ РАБОТЫ
 def raboti(request):
     context = {
-        'title':'',
+        'Title':'Наши работы',
         'raboti': Rabota.objects.all(),
         'kategorii': ProjectType.objects.all(),
         'kolichestvo': Rabota.objects.all().count()
@@ -35,7 +35,8 @@ def raboti(request):
 def rabota(request, slug):
     context = {
         ##
-        'rabota_info': Rabota.objects.get(slug=slug)
+        'rabota_info': Rabota.objects.get(slug=slug),
+        'Title': Rabota.objects.get(slug=slug).title,
 
     }
     return render(request, 'index/rabota.html', context=context)
@@ -44,7 +45,7 @@ def rabota(request, slug):
 ## СТРАНИЦА КАТЕГОРИИ РАБОТ
 def kategorii(request, project_type_slug):
     context = {
-        'Title': 'Боич',
+        'Title': f'Боич — {ProjectType.objects.get(slug=project_type_slug).title}',
         'kategoriya': Rabota.objects.filter(project_type__slug=project_type_slug),
         'kategorii': ProjectType.objects.all(),
         'kategoriya_imya': ProjectType.objects.get(slug=project_type_slug),
@@ -59,6 +60,7 @@ def kategorii(request, project_type_slug):
 def kompetencii(request):
     context = {
         'tetle':'',
+        'Title': 'Боич — Компетенции'
     }
     return render(request, 'index/kompetencii.html', context=context)
 
@@ -86,6 +88,10 @@ class LoginViewForm(LoginView):
     success_url = 'dashboard'
     redirect_authenticated_user = True
     redirect_field_name = 'dashboard'
+    def get_context_data(self, **kwargs):
+        context = super(LoginViewForm, self).get_context_data(**kwargs)
+        context['Title'] = 'Личный кабинет клиента',
+        return context
     def get_success_url(self):
         return reverse_lazy('dashboard')
 

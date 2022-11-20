@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+{%extends 'default.html'%}{%load static%}
+{% comment %} <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +7,9 @@
 </head>
 <body>
 </body>
-</html>
-{%extends 'default.html'%}{%load static%}
-{%block title%}{{title}}{%endblock%}
+</html> {% endcomment %}
+
+{%block title%}{{Title}}{%endblock%}
 {%block css_body%}navbarosn cosmo{%endblock%}
 {%block content%}
 
@@ -22,30 +23,11 @@
     </div>
 </div>
 <!--<div class="video-container">-->
-<!--   <video class="css-1q2r8xl e827huz0" autoplay preload="auto" no-controls autoplay loop playsinline muted>-->
-<!--    <source src="https://videos-cdn.readymag.com/5a265bbfee4355042755be85/5c6046d5d21efd7a407540c0/9fc711ad-58bc-4324-b0eb-c3c9d5f1e186.mp4" type="video/mp4">-->
-<!--</video>-->
-<!--</div><div class="lo"></div>-->
+
 <div class="clearfix" style="width:100%;height:69px;"></div>
 <h3 class=" wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.6s" data-wow-offset="300"
 style="color:#FFFFFF;width:95%;margin: 0 auto;text-align:right;font-weight:400;"></h3>
 <div class="clearfix" style="width:100%;height:69px;"></div>
-{% comment %} <div class="super wow fadeIn" data-wow-duration="2.3s" data-wow-delay="1.5s"  data-wow-offset="300">
-<div class="listaem">
-    <h3>Разработка</h3><p>Реализовываем самые сложные интернет-проекты полностью своими силами</p>
-    <div class="vidi-rabot">
-        <span>веб-разработка PHP/Python/.Net</span><span> мобильная-разработка iOS/Android</span><span> информационная безопасность</span><span> высоконагруженные системы</span><span> проектирование серверной архитектуры</span>
-    </div>
-</div>
-<div class="video">
-{% comment %} <img src="{% static '56e62f74ffb3113cf561da42cea0f08d.jpg' %}" alt=""> {% endcomment %}
-{% comment %} <div class="izo"><img src="{% static 'experimental-play-puffy.png' %}" alt=""> showreel</div>
-{% comment %} <div class="super-opisanie"></div> {% endcomment %}
-{% comment %} <div class="video-opisanie">Боич — digital-продакшн полного цикла, с собственной продуктовой аналитикой, дизайном, веб- и мобильной разработкой.</div> {% endcomment %}
-
-{% comment %} </div>  {% endcomment %}
-
-{% comment %} </div> {% endcomment %}
 <div class="clearfix" style="width:100%;height:69px;"></div>
 <div class="container margin-0 mw-95 mw-94 lentatut">
     <div class="lenta wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.6s" data-wow-offset="100"><h4>Создаем функциональные сайты и сервисы
@@ -68,15 +50,6 @@ style="color:#FFFFFF;width:95%;margin: 0 auto;text-align:right;font-weight:400;"
         <div class="nagrada wow fadeIn" data-wow-duration="0.6s" data-wow-delay="1.1s"><span>30+</span>сотрудников в штате</div>
         <div class="nagrada wow fadeIn" data-wow-duration="0.6s" data-wow-delay="1.2s"><span>60+</span>наград в конкурсах</div>
     </div>
-    {% comment %} <div class="rr-rr">
-        <img src="{% static 'r1.png' %}" alt="">
-    </div>
-    <div class="rr-rr">
-        <img src="{% static 'r1.png' %}" alt="">
-    </div>
-    <div class="rr-rr">
-        <img src="{% static 'r1.png' %}" alt="">
-    </div> {% endcomment %}
     </div>
 </div>
 <div class="container sdelannoe">
@@ -178,22 +151,5 @@ style="color:#FFFFFF;width:95%;margin: 0 auto;text-align:right;font-weight:400;"
     </a>
 </div>
 </div>
-<!-- <div class="content mw-94 margin-0 df" style="background-color: #FFFFFF;border-radius: 3px;padding: 36px;">
-    <div class="" style="    padding: 3.3vw 3.3vw 3.3vw 1.3vw;"><h3 style="    color: #131313;
-        font-size: 4.3vw;
-        padding: 3.3vw 20px 3.3vw 19px;padding: 0 0 0 0;
-        }">Есть проект?</h3>
-        <p style="color: #9f9f9f;">
-            Настал тот самый момент, когда нам нужно еще больше свежих мозгов для самых смелых проектов!
-        </p></div>
-    <div class="" style="width: 60%;">
-        <form action="" style="display:flex;flex-direction:column;" class="footer-kontakt">
-            <input type="text" placeholder="Имя">
-            <input type="email" placeholder="Телефон">
-            <input type="text" placeholder="Почта">
-            <textarea name="" id="" cols="19" rows="10" placeholder="Опишите вопрос..."></textarea>
-            <button class="" type="submit">Написать</button>
-        </form>
-    </div> -->
 </div>
 {%endblock%}
