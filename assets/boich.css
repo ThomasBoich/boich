@@ -2,7 +2,7 @@
     font-size:33px;display: flex;
     align-items: center;
     box-sizing: border-box;
-}.BOICH a{color:#FFFFFF;margin: 0px 3% 0px 0px;margin: 0px 18px 0px 0px;}
+}.BOICH a{color:#FFFFFF;margin: 0px 3% 0px 0px;margin: 0px 18px 0px 0px;}.ssilkinaekrane{position: absolute;right: 3%;bottom:10vh;line-height: 1.4;display: flex;justify-content: space-between;width:20%;}.ssilkinaekrane .links a{color:#FFFFFF;width:100%;font-size:23px;}#links{display: flex;flex-direction: column;text-align: right;}
 .BOICH span{font-size:18px;height: 22px;    height: 40px;
     width: 25px;
     width: 39px;
@@ -40,17 +40,25 @@ body{font-family: 'Gilroy-Regular';color: #131313;}
     position: absolute;
     position: fixed;
     z-index: 999999999;
+    display: none;
 }.menu .content{
     max-width: 969px;
     padding: 13vh 0vh 0vh 0vh;
  }.menu1{
-
+    margin: 0 auto;
+    width: 90%;
+    max-width: 969px;
  }.menu1 a{
        text-decoration: none;
     font-size: 69px;
     font-weight: bold;
     color: #131313;
     line-height: 1.5;
+   }
+   .menu-content{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
    }
 
 /* ШАБЛОН */
@@ -61,6 +69,7 @@ body{font-family: 'Gilroy-Regular';color: #131313;}
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     z-index:999999;background-color: #1f1b26;
+    background-color: #1e1d23;
     }
 /* ШАБЛОН */
 
@@ -88,6 +97,7 @@ body{font-family: 'Gilroy-Regular';color: #131313;}
     width: 49px;
     height: 4.3px;
     background: #01ac6a;
+    background: #b3e321;
     -webkit-transition: width .5s cubic-bezier(.785,.135,.15,.86),background .5s cubic-bezier(.785,.135,.15,.86),-webkit-transform .5s cubic-bezier(.785,.135,.15,.86);
     transition: width .5s cubic-bezier(.785,.135,.15,.86),background .5s cubic-bezier(.785,.135,.15,.86),-webkit-transform .5s cubic-bezier(.785,.135,.15,.86);
     transition: width .5s cubic-bezier(.785,.135,.15,.86),background .5s cubic-bezier(.785,.135,.15,.86),transform .5s cubic-bezier(.785,.135,.15,.86);
@@ -110,6 +120,7 @@ body{font-family: 'Gilroy-Regular';color: #131313;}
 }
 .h1-e1 h1{
     font-size: 6vw;
+    font-size: 8vw;
 }
 .h1-e1 p > a{
     font-size:20px;
@@ -120,7 +131,7 @@ body{font-family: 'Gilroy-Regular';color: #131313;}
 
 .element{
     display:inline-block;
-    float:left;}
+    float:left;color: #c3e321;color:#b3e321;}
 .typed-cursor{
     display:inline-block;
     float:left;
@@ -130,7 +141,7 @@ body{font-family: 'Gilroy-Regular';color: #131313;}
 /* ПЕРВЫЙ ЭКРАН */
 
 /* ПЛАВАЮЩАЯ КНОПКА */
-.krug{transition:0.3s;-webkit-transition:0.3s;-moz-transition:0.3s;width:69px;height:69px;background-color:#FFFFFF;border-radius:60px;padding:30px;position:absolute;position:fixed;z-index:99999999;right:10%;bottom:11vh;right:3%;display:flex;align-items:center;padding:6px;justify-content:center;width:218px;height:218px;border-radius:218px;bottom:17vh;color:#333333;}
+.krug{transition:0.3s;-webkit-transition:0.3s;-moz-transition:0.3s;width:69px;height:69px;background-color:#FFFFFF;border-radius:60px;padding:30px;position:absolute;position:fixed;z-index:99999999;right:10%;bottom:11vh;right:3%;display:flex;align-items:center;padding:6px;justify-content:center;width:218px;height:218px;border-radius:218px;bottom:17vh;bottom:49vh;color:#333333;}
 /* ПЛАВАЮЩАЯ КНОПКА */
 
 a.aakk{color:#333333;}.krug img{width:100%;width:43px;height:43px;}
@@ -141,12 +152,12 @@ a.aakk{color:#333333;}.krug img{width:100%;width:43px;height:43px;}
     color:#333333;
     transition:0.7s;-webkit-transition:0.7s;-moz-transition:0.7s;
     opacity:3;
-}.style .krug{right:3%;bottom: 4%;height:49px;font-size: 18px;    background-color: #01ac6a;}
+}.style .krug{right:3%;bottom: 4%;height:49px;font-size: 18px;    background-color: #01ac6a;background-color: #b3e321;}
  .cosmo-solnce .krug{right:3%;bottom: 4%;height:49px;font-size: 18px;    background-color: #01ac6a;}
 .style .shou{display: none!IMPORTANT;}
 .cosmo-solnce .shou{display:none!IMPORTANT;}
 .sdelatzakaz{display: none;}
-.style .sdelatzakaz{display: flex;font-weight: 700;color:#FFFFFF;}
+.style .sdelatzakaz{display: flex;font-weight: 700;color:#FFFFFF;color:#131313;}
 .cosmo-solnce .sdelatzakaz{right:3%;bottom: 4%;height:49px;font-size: 18px;font-weight: 700;color:#FFFFFF;display: flex;
     align-items: center;}
 .e1{height:90vh;height:90vh;margin: auto auto 14vh auto;}

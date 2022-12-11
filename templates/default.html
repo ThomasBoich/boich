@@ -22,7 +22,7 @@
   top: 0;
   right:0;
   bottom:0;
-  z-index: 100000;z-index: 999999999;background-color: #1f1b26;
+  z-index: 100000;z-index: 999999999;background-color: #1f1b26;background-color: #1e1d23;
 }.loader {
   height: 40px;
   width: 40px;
@@ -31,6 +31,7 @@
   margin-left: -20px;
   top: 50%;
   margin-top: -20px;
+  background-color: #1e1d23;
 }
 
 .loader:before,
@@ -70,14 +71,12 @@
     transform: rotate(-180deg) skew(-360deg);
   }
 }
-
 /*body {*/
 /*  background: linear-gradient(90deg, #00b377, #00d68f);*/
 /*  box-shadow: inset 0px 0px 90px rgba(0, 0, 0, 0.5);*/
 /*  margin: 0px;*/
 /*  padding: 0px;*/
 /*}*/
-
 .demo {
   width: 100px;
   height: 102px;
@@ -86,7 +85,6 @@
   top: 45%;
   left: calc(50% - 50px);
 }
-
 .circle {
   width: 100%;
   height: 100%;
@@ -102,7 +100,6 @@
   backgroudn-clip: padding;
   box-shadow: inset 0px 0px 10px rgba(0, 255, 170, 0.15);
 }
-
 @-webkit-keyframes spin {
   from {
     transform: rotate(0deg);
@@ -111,7 +108,6 @@
     transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -148,8 +144,6 @@
   -webkit-animation: spin 5s infinite linear;
           animation: spin 5s infinite linear;
 }
-
-
     </style>
 </head>
 <body class="{%block css_body%}{%endblock%}">
@@ -173,16 +167,19 @@
 </div>
 </div>
 <div class="menu">
+  <div class="menu-content">
+    <div class="menu1">
+      <ul>
+          <li><a href="">Компетенции</a></li>
+          <li><a href="">Работы</a></li>
+          <li><a href="">О Компании</a></li>
+      </ul>
+  </div>
+  <div class=""></div>
+  <div class="" id=""></div>
+</div>
+  </div>
     <div class="content margin-0">
-        <div class="menu1">
-            <ul>
-                <li><a href="">Компетенции</a></li>
-                <li><a href="">Работы</a></li>
-                <li><a href="">О Компании</a></li>
-            </ul>
-        </div>
-        <div class=""></div>
-    </div>
 </div>
 <div class="app" id="app">
     {%include 'nav_glav.html'%}
